@@ -1,15 +1,21 @@
-import './index.css';
+import "./index.css";
+import React from "react";
 
-function Produs() {
+function Produs(props) {
+  
+  const categorie = props.categorie;
+  const pret = props.pret;
+  const denumire = props.denumire;
+  const backgroundColor = props.backgroundColor;
+
+
   return (
-    
-
     <header>
-    <div class='border'>  
-       <p>Exercițiu 4</p> 
-       </div> 
-       <br /> 
-</header>
+      <div style={{backgroundColor: props.backgroundColor}} >
+       <p >Produsul se numete {denumire}, este în categoria {categorie}, are prețul de {pret} lei</p>
+      </div>
+      <br />
+    </header>
   );
 }
 

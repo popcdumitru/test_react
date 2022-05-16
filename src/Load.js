@@ -1,11 +1,15 @@
+import { useState, useEffect } from 'react';
 import './index.css'; 
 
 function Load() {
+  const [count, setCount] = useState(5);
+ 
   return (
     
       <header>
           <div class='border'>  
-             <p>Exercițiu 4</p> 
+        
+          setCount ? 'Loading' : 'finish loading';
              </div> 
              <br /> 
       </header>
@@ -14,3 +18,6 @@ function Load() {
 }
 
 export default Load;
+
+
+//to be continued

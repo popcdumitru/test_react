@@ -1,15 +1,21 @@
-import './index.css'; 
+import "./index.css";
+import React, { useState } from "react";
+
 
 function Add() {
+  const [color , setColor] = useState();
   return (
-    
-      <header>
-          <div class='border'>  
-             <p>Exercițiu 3</p> 
-             </div> 
-             <br /> 
-      </header>
-    
+    <header>
+      <div class="border">
+        <input
+          type="text"
+          value={setColor}
+          onChange={(e) => setColor(e.value)}
+        />
+      
+      </div>
+      <br />
+    </header>
   );
 }
 

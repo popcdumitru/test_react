@@ -18,3 +18,11 @@ code {
   border-color: red;
   text-align: center;
 }
+
+.nameDecoration::after{
+  color:rgb(255, 0, 0);
+
+  content: " Numele de alături este colorat";
+  
+}
+
