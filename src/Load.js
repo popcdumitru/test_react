@@ -2,17 +2,19 @@ import { useState, useEffect } from 'react';
 import './index.css'; 
 
 function Load() {
-  const [count, setCount] = useState(5);
- 
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      if(!loaded) setLoaded(true);
+    }, 5000)
+  })
+
   return (
     
-      <header>
-          <div class='border'>  
-        
-          setCount ? 'Loading' : 'finish loading';
-             </div> 
-             <br /> 
-      </header>
+          <div class='border'>
+                {loaded ?  'Finished Loading' : 'loading'}
+             </div>
     
   );
 }
@@ -20,4 +22,4 @@ function Load() {
 export default Load;
 
 
-//to be continued
+//to be continued stai o 
